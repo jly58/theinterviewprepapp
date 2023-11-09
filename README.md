@@ -67,7 +67,8 @@ Detail to edit answer
 
 ...
 Wireframes
-<img src="[YOUR_IMAGE_URL_HERE](https://hackmd.io/_uploads/BkLjoJ9Q6.jpg)" width=600>
+
+![IMG_9018](https://github.com/jly58/theinterviewprepapp/assets/107456316/b64b66c3-db72-4eab-8d8f-d589da54f88b)
 
 
 
