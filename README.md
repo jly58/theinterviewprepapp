@@ -67,7 +67,8 @@ Detail to edit answer
 
 ...
 Wireframes
-![](https://hackmd.io/_uploads/BkLjoJ9Q6.jpg)
+<img src="[YOUR_IMAGE_URL_HERE](https://hackmd.io/_uploads/BkLjoJ9Q6.jpg)" width=600>
+
 
 
 
