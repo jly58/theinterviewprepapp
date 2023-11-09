@@ -67,7 +67,7 @@ Detail to edit answer
 
 ...
 Wireframes
-![IMG_9018.jpg](https://hackmd.io/_uploads/BkLjoJ9Q6.jpg)
+![](https://hackmd.io/_uploads/BkLjoJ9Q6.jpg)
 
 
 
