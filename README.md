@@ -68,7 +68,7 @@ Detail to edit answer
 ...
 Wireframes
 
-![IMG_9018]([https://github.com/jly58/theinterviewprepapp/assets/107456316/b64b66c3-db72-4eab-8d8f-d589da54f88b](https://github.com/jly58/theinterviewprepapp/blob/main/IMG_9018.HEIC))
+![IMG_9018](https://github.com/jly58/theinterviewprepapp/assets/107456316/b64b66c3-db72-4eab-8d8f-d589da54f88b](https://github.com/jly58/theinterviewprepapp/blob/main/IMG_9018.HEIC)
 
 
 
