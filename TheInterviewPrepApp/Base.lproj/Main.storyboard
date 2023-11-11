@@ -58,6 +58,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xqt-5u-Mtt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DRo-b8-V9M">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -70,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="38.931297709923662" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Question Feed-->
         <scene sceneID="8ZA-gu-bb3">
             <objects>
-                <viewController id="3xN-Em-DRl" sceneMemberID="viewController">
+                <viewController id="3xN-Em-DRl" customClass="QuestionFeed" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mFe-Zh-R1h">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="answer to this question DETAIL" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYh-kP-SWO">
-                                <rect key="frame" x="46" y="253" width="290" height="391"/>
+                                <rect key="frame" x="51" y="231" width="290" height="391"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>

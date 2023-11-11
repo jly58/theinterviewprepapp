@@ -30,7 +30,7 @@ Users can write their own potential interview question Users can write their own
 Users can edit the question
 Users can edit the answer
 Users can view their data which will be saved locally.
-- user can log in
+
 ...
 Optional Nice-to-have Stories
 Users can favorite interview questions.
@@ -85,3 +85,16 @@ Networking
 [Add list of network requests by screen ]
 [Create basic snippets for each Parse network request]
 [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+Progress:
+
+Unit 8, 11/11: So far I've created the screens needed for this app. E.g. home screen, question feed, and the detail screen. This is just the backbones. I had some trouble connecting my table view to my view controller. I was able to figure it out and had to create a new class for the view controller and then connect the table view to it.
+
+The following **required** functionality is completed:
+
+[ ] Users can write their elevator pitch.
+[ ] Users can edit their elevator pitch.
+[ ] Users can write their own potential interview question Users can write their own answer.
+[ ] Users can edit the question
+[ ] Users can edit the answer
+[ ] Users can view their data which will be saved locally.

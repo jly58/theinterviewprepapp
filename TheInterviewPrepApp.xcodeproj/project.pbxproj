@@ -14,6 +14,7 @@
 		A106C5612AFCA46E00C92CF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A106C5602AFCA46E00C92CF6 /* Assets.xcassets */; };
 		A106C5642AFCA46E00C92CF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A106C5622AFCA46E00C92CF6 /* LaunchScreen.storyboard */; };
 		A106C56C2AFCAA9100C92CF6 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106C56B2AFCAA9100C92CF6 /* QuestionCell.swift */; };
+		A1EB9ACB2B0010A5009F7946 /* QuestionFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EB9ACA2B0010A5009F7946 /* QuestionFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A106C5632AFCA46E00C92CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A106C5652AFCA46E00C92CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A106C56B2AFCAA9100C92CF6 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		A1EB9ACA2B0010A5009F7946 /* QuestionFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		A106C54B2AFCA46C00C92CF6 = {
 			isa = PBXGroup;
 			children = (
+				A1EB9ACA2B0010A5009F7946 /* QuestionFeed.swift */,
 				A106C56B2AFCAA9100C92CF6 /* QuestionCell.swift */,
 				A106C5562AFCA46C00C92CF6 /* TheInterviewPrepApp */,
 				A106C5552AFCA46C00C92CF6 /* Products */,
@@ -143,6 +146,7 @@
 			files = (
 				A106C55C2AFCA46C00C92CF6 /* ViewController.swift in Sources */,
 				A106C56C2AFCAA9100C92CF6 /* QuestionCell.swift in Sources */,
+				A1EB9ACB2B0010A5009F7946 /* QuestionFeed.swift in Sources */,
 				A106C5582AFCA46C00C92CF6 /* AppDelegate.swift in Sources */,
 				A106C55A2AFCA46C00C92CF6 /* SceneDelegate.swift in Sources */,
 			);
