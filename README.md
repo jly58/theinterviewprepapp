@@ -92,9 +92,9 @@ Unit 8, 11/11: So far I've created the screens needed for this app. E.g. home sc
 
 The following **required** functionality is completed:
 
-[ ] Users can write their elevator pitch.
-[ ] Users can edit their elevator pitch.
-[ ] Users can write their own potential interview question Users can write their own answer.
-[ ] Users can edit the question
-[ ] Users can edit the answer
-[ ] Users can view their data which will be saved locally.
+- [ ] Users can write their elevator pitch.
+- [ ] Users can edit their elevator pitch.
+- [ ] Users can write their own potential interview question Users can write their own answer.
+- [ ] Users can edit the question
+- [ ] Users can edit the answer
+- [ ] Users can view their data which will be saved locally.
