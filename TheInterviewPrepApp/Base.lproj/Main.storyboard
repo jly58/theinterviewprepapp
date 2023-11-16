@@ -99,7 +99,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A QUESTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV7-SP-ccV">
-                                                    <rect key="frame" x="143" y="62" width="212" height="45"/>
+                                                    <rect key="frame" x="43" y="34" width="312" height="73"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                                     <nil key="textColor"/>
@@ -108,6 +108,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="questionLabel" destination="KV7-SP-ccV" id="47l-tQ-Ll0"/>
                                             <segue destination="COB-ij-xQL" kind="show" id="eJc-H5-TV3"/>
                                         </connections>
                                     </tableViewCell>

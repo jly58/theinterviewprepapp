@@ -12,14 +12,14 @@ class QuestionFeedViewController: UIViewController, UITableViewDataSource, UITab
     
     
     @IBOutlet weak var qTableView: UITableView!
-    
+
     var questions: [Question] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         qTableView.dataSource = self
         qTableView.delegate = self
-        let initialQuestion = Question(text: "What is your initial question?")
+        let initialQuestion = Question(text: "Initial Question")
         questions.append(initialQuestion)
         qTableView.reloadData()
     }
