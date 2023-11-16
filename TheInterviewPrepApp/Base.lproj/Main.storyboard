@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="38.931297709923662" y="3.5211267605633805"/>
         </scene>
-        <!--Question Feed-->
+        <!--Question Feed View Controller-->
         <scene sceneID="8ZA-gu-bb3">
             <objects>
-                <viewController id="3xN-Em-DRl" customClass="QuestionFeed" sceneMemberID="viewController">
+                <viewController id="3xN-Em-DRl" customClass="QuestionFeedViewController" customModule="TheInterviewPrepApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mFe-Zh-R1h">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,15 +118,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="c8a-Yn-PIw"/>
+                    <connections>
+                        <outlet property="qTableView" destination="mts-n0-5Jo" id="T9c-5F-x4M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ul-Um-WUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1234.3511450381679" y="711.97183098591552"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="5XB-1c-JDz">
             <objects>
-                <viewController id="COB-ij-xQL" sceneMemberID="viewController">
+                <viewController id="COB-ij-xQL" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6S-9I-68G">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

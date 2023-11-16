@@ -9,6 +9,8 @@ import UIKit
 
 class QuestionFeed: UITableViewController {
 
+    
+    @IBOutlet weak var questionTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
