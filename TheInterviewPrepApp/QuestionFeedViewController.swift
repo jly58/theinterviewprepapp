@@ -7,39 +7,34 @@
 
 import UIKit
 
+
 class QuestionFeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-
+    
+    
     @IBOutlet weak var qTableView: UITableView!
     
     var questions: [Question] = []
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            qTableView.dataSource = self
-            qTableView.delegate = self
-        }
-
-
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return questions.count
-        }
-
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-            let question = questions[indexPath.row]
-            cell.configure(with: question)
-            return cell
-        }
-
-        func addQuestion(_ question: Question) {
-            questions.append(question)
-            qTableView.reloadData()
-        }
-
-        @IBAction func addQuestionButtonTapped(_ sender: Any) {
-            let newQuestion = Question(text: "What is your new question?")
-            addQuestion(newQuestion)
-        }
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        qTableView.dataSource = self
+        qTableView.delegate = self
+        let initialQuestion = Question(text: "What is your initial question?")
+        questions.append(initialQuestion)
+        qTableView.reloadData()
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return questions.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
+        let question = questions[indexPath.row]
+        cell.configure(with: question)
+        return cell
+    }
+}
