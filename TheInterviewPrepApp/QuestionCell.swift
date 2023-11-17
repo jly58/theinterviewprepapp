@@ -12,9 +12,12 @@ class QuestionCell: UITableViewCell {
     
     @IBOutlet weak var questionTextField: UITextField!
     
-    func configure(with question: Question) {
+    func configure(with question: QuestionCodable) {
             questionTextField.text = question.text
         }
+//    func configure(with question: Question) {
+//            questionTextField.text = question.text
+//        }
     func updateQuestionText(with newText: String) {
             questionTextField.text = newText
         }

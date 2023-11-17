@@ -16,6 +16,7 @@
 		A106C56C2AFCAA9100C92CF6 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106C56B2AFCAA9100C92CF6 /* QuestionCell.swift */; };
 		A1269B162B07441A001DA3BE /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1269B152B07441A001DA3BE /* EditQuestionViewController.swift */; };
 		A1269B182B07485F001DA3BE /* editQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1269B172B07485F001DA3BE /* editQuestion.swift */; };
+		A1269B1A2B075B11001DA3BE /* QuestionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1269B192B075B11001DA3BE /* QuestionProtocol.swift */; };
 		A1CF23CE2B05BFD50031732D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF23CD2B05BFD50031732D /* DetailViewController.swift */; };
 		A1CF23D02B05C2CA0031732D /* QuestionFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF23CF2B05C2CA0031732D /* QuestionFeedViewController.swift */; };
 		A1CF23D22B05C5100031732D /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF23D12B05C5100031732D /* QuestionModel.swift */; };
@@ -33,6 +34,7 @@
 		A106C56B2AFCAA9100C92CF6 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		A1269B152B07441A001DA3BE /* EditQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionViewController.swift; sourceTree = "<group>"; };
 		A1269B172B07485F001DA3BE /* editQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editQuestion.swift; sourceTree = "<group>"; };
+		A1269B192B075B11001DA3BE /* QuestionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProtocol.swift; sourceTree = "<group>"; };
 		A1CF23CD2B05BFD50031732D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A1CF23CF2B05C2CA0031732D /* QuestionFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFeedViewController.swift; sourceTree = "<group>"; };
 		A1CF23D12B05C5100031732D /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		A106C5562AFCA46C00C92CF6 /* TheInterviewPrepApp */ = {
 			isa = PBXGroup;
 			children = (
+				A1269B192B075B11001DA3BE /* QuestionProtocol.swift */,
 				A1269B172B07485F001DA3BE /* editQuestion.swift */,
 				A1269B152B07441A001DA3BE /* EditQuestionViewController.swift */,
 				A1CF23D12B05C5100031732D /* QuestionModel.swift */,
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1269B162B07441A001DA3BE /* EditQuestionViewController.swift in Sources */,
+				A1269B1A2B075B11001DA3BE /* QuestionProtocol.swift in Sources */,
 				A1CF23D22B05C5100031732D /* QuestionModel.swift in Sources */,
 				A1CF23D02B05C2CA0031732D /* QuestionFeedViewController.swift in Sources */,
 				A106C55C2AFCA46C00C92CF6 /* ViewController.swift in Sources */,

@@ -11,26 +11,34 @@ class DetailViewController: UIViewController{
     
     @IBOutlet weak var ansTextView: UITextView!
     
-    var interviewAnswer: String?
+    var questionIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let storedAnswer = UserDefaults.standard.string(forKey: "interviewAnswer") {
-            interviewAnswer = storedAnswer
-            ansTextView.text = storedAnswer
-        } else{
-            ansTextView.text = interviewAnswer ?? "Type your answer here..."
-           // ansTextView.delegate = self
-        }
-        
-    }
+     
+        if let index = questionIndex,
+                
+                   let storedAnswer = UserDefaults.standard.string(forKey: "interviewAnswer_\(index)") {
+                    ansTextView.text = storedAnswer
+                } else {
+                    ansTextView.text = "Type your answer here..."
+                }
+
+                ansTextView.delegate = self
+            }
+
     
     @IBAction func saveButton(_ sender: Any) {
-        UserDefaults.standard.set(ansTextView.text, forKey: "interviewAnswer")
-        
-        
-        navigationController?.popViewController(animated: true)
-        
+        print("tapped")
+        if let index = questionIndex {
+            print("Question Index: \(index)")
+            UserDefaults.standard.set(ansTextView.text, forKey: "interviewAnswer_\(index)")
+            print("Answer for question at index \(index) saved: \(String(describing: ansTextView.text))")
+        } else {
+            print("questionIndex is nil")
+        }
+
+        ansTextView.resignFirstResponder()
     }
     // MARK: - Navigation
     

@@ -14,7 +14,7 @@ class QuestionFeedViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var qTableView: UITableView!
     
-    var questions: [Question] = []
+    var questions: [QuestionCodable] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,33 @@ class QuestionFeedViewController: UIViewController, UITableViewDataSource, UITab
         addQuestionButton.isHidden = false
         qTableView.dataSource = self
         qTableView.delegate = self
-        let initialQuestion = Question(text: "Initial Question")
-        questions.append(initialQuestion)
+        loadQuestions()
+                
+        if questions.isEmpty {
+            let initialQuestion = QuestionCodable(text: "Enter Your Question")
+            questions.append(initialQuestion)
+        }
+                
+        // let initialQuestion = Question(text: "Enter Your Question")
+        // questions.append(initialQuestion)
         qTableView.reloadData()
     }
     
+    func loadQuestions() {
+            if let savedQuestions = UserDefaults.standard.object(forKey: "questions") as? Data {
+                let decoder = JSONDecoder()
+                if let loadedQuestions = try? decoder.decode([QuestionCodable].self, from: savedQuestions) {
+                    questions = loadedQuestions
+                }
+            }
+        }
+    
+    func saveQuestions() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(questions) {
+            UserDefaults.standard.set(encoded, forKey: "questions")
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -38,14 +60,14 @@ class QuestionFeedViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
         // cell.questionTextField.text = questions[indexPath.row].text
         let question = questions[indexPath.row]
-           cell.configure(with: question)
-           cell.questionTextField.tag = indexPath.row
-           cell.questionTextField.addTarget(self, action: #selector(questionTextFieldDidChange(_:)), for: .editingChanged)
-           
-//        let question = questions[indexPath.row]
-//        print("Question text: \(question.text)")
-//
-//        cell.configure(with: question)
+        cell.configure(with: question)
+        cell.questionTextField.tag = indexPath.row
+        cell.questionTextField.addTarget(self, action: #selector(questionTextFieldDidChange(_:)), for: .editingChanged)
+        
+        //        let question = questions[indexPath.row]
+        //        print("Question text: \(question.text)")
+        //
+        //        cell.configure(with: question)
         return cell
     }
     
@@ -63,12 +85,26 @@ class QuestionFeedViewController: UIViewController, UITableViewDataSource, UITab
     // MARK: - Actions
     
     @IBAction func addQuestionButtonTapped(_ sender: UIButton) {
-        let newQuestion = Question(text: "") // You can set an initial text if needed
+        let newQuestion = QuestionCodable(text: "") // Use the appropriate initializer
           questions.append(newQuestion)
           qTableView.reloadData()
-      }
+        saveQuestions() // Save the questions after modification
+
+    }
     
-    // MARK: - Helper Methods
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let selectedQuestionIndex = indexPath.row
+        performSegue(withIdentifier: "detailSegue", sender: indexPath.row)
+    }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue", let selectedQuestionIndex = sender as? Int {
+            if let detailViewController = segue.destination as? DetailViewController {
+                detailViewController.questionIndex = selectedQuestionIndex
+            }
+        }
+    }
 }
+    
+    
+
