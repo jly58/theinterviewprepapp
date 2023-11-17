@@ -98,24 +98,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="168"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A QUESTION" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV7-SP-ccV">
-                                                    <rect key="frame" x="20" y="44" width="353" height="67"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="question TEXT FIELD" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWS-Hg-enR">
+                                                    <rect key="frame" x="20" y="67" width="353" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="questionLabel" destination="KV7-SP-ccV" id="47l-tQ-Ll0"/>
-                                            <segue destination="COB-ij-xQL" kind="show" id="eJc-H5-TV3"/>
+                                            <outlet property="questionTextField" destination="UWS-Hg-enR" id="bDm-rA-GR9"/>
+                                            <segue destination="COB-ij-xQL" kind="show" identifier="detailSegue" id="eJc-H5-TV3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Laz-2G-lM4">
-                                <rect key="frame" x="300" y="29" width="59" height="35"/>
+                                <rect key="frame" x="305" y="103" width="59" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,12 +132,24 @@
                     <navigationItem key="navigationItem" id="c8a-Yn-PIw"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addQuestionButton" destination="Laz-2G-lM4" id="mZW-pf-FDZ"/>
                         <outlet property="qTableView" destination="mts-n0-5Jo" id="T9c-5F-x4M"/>
+                        <segue destination="rCD-dc-s8j" kind="show" id="Pdz-nn-KwT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ul-Um-WUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1234.3511450381679" y="711.97183098591552"/>
+        </scene>
+        <!--Edit Question View Controller-->
+        <scene sceneID="HVP-zX-cvX">
+            <objects>
+                <viewController id="rCD-dc-s8j" customClass="EditQuestionViewController" customModule="TheInterviewPrepApp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="b6x-4q-Xbs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mnq-UL-4I1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166" y="1437"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="5XB-1c-JDz">

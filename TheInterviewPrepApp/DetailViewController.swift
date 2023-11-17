@@ -17,10 +17,11 @@ class DetailViewController: UIViewController{
         super.viewDidLoad()
         if let storedAnswer = UserDefaults.standard.string(forKey: "interviewAnswer") {
             interviewAnswer = storedAnswer
+            ansTextView.text = storedAnswer
+        } else{
+            ansTextView.text = interviewAnswer ?? "Type your answer here..."
+           // ansTextView.delegate = self
         }
-        ansTextView.text = interviewAnswer ?? "Type your answer here..."
-        ansTextView.delegate = self
-        
         
     }
     

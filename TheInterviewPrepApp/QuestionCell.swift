@@ -8,10 +8,14 @@
 import UIKit
 
 class QuestionCell: UITableViewCell {
-    @IBOutlet weak var questionLabel: UILabel!
     
+    
+    @IBOutlet weak var questionTextField: UITextField!
     
     func configure(with question: Question) {
-            questionLabel.text = question.text
+            questionTextField.text = question.text
+        }
+    func updateQuestionText(with newText: String) {
+            questionTextField.text = newText
         }
 }
