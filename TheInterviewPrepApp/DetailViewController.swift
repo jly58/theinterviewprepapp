@@ -6,27 +6,34 @@
 //
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController{
     
-    @IBOutlet weak var answerTextView: UITextView!
+    
+    @IBOutlet weak var ansTextView: UITextView!
     
     var interviewAnswer: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let storedAnswer = UserDefaults.standard.string(forKey: "interviewAnswer") {
+            interviewAnswer = storedAnswer
+        }
+        ansTextView.text = interviewAnswer ?? "Type your answer here..."
+        ansTextView.delegate = self
         
-        // Set up initial text or any other configurations
-        answerTextView.text = interviewAnswer ?? "Type your answer here..."
-        answerTextView.delegate = self
+        
     }
     
+    @IBAction func saveButton(_ sender: Any) {
+        UserDefaults.standard.set(ansTextView.text, forKey: "interviewAnswer")
+        
+        
+        navigationController?.popViewController(animated: true)
+        
+    }
     // MARK: - Navigation
     
-    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        // Save the answer and go back to the previous view controller
-        interviewAnswer = answerTextView.text
-        navigationController?.popViewController(animated: true)
-    }
+    
 }
     extension DetailViewController: UITextViewDelegate {
         func textViewDidBeginEditing(_ textView: UITextView) {
