@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,28 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="profile/ your PITCH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM6-6F-O93">
-                                <rect key="frame" x="83" y="241" width="259" height="212"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Elevator Pitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmy-nV-FfQ">
+                                <rect key="frame" x="67" y="103" width="257" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="PITCH" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1k-kc-VjS">
+                                <rect key="frame" x="44" y="169" width="303" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fii-tS-jIf"/>
+                    <connections>
+                        <outlet property="pitchTextField" destination="j1k-kc-VjS" id="1Sf-wC-ueF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1892.3664122137404" y="3.5211267605633805"/>
         </scene>
-        <!--Item-->
+        <!--Pitch-->
         <scene sceneID="MGC-IR-IFx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dg2-lc-ob4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9sQ-sz-8sF"/>
+                    <tabBarItem key="tabBarItem" title="Pitch" image="text.bubble.fill" catalog="system" id="9sQ-sz-8sF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wS0-yo-R3C">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -87,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mts-n0-5Jo">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="872"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="746"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -124,6 +134,15 @@
                                     <action selector="addQuestionButtonTapped:" destination="3xN-Em-DRl" eventType="touchUpInside" id="Omc-fl-dGS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-iS-kd0">
+                                <rect key="frame" x="23" y="103" width="61" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveQuestionTapped:" destination="3xN-Em-DRl" eventType="touchUpInside" id="6Io-Mu-RT5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uZN-wN-fc4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,6 +151,7 @@
                     <navigationItem key="navigationItem" id="c8a-Yn-PIw"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="SaveQuestionButton" destination="V7a-iS-kd0" id="092-fR-Bb7"/>
                         <outlet property="addQuestionButton" destination="Laz-2G-lM4" id="mZW-pf-FDZ"/>
                         <outlet property="qTableView" destination="mts-n0-5Jo" id="T9c-5F-x4M"/>
                         <segue destination="rCD-dc-s8j" kind="show" id="Pdz-nn-KwT"/>
@@ -192,11 +212,14 @@
             </objects>
             <point key="canvasLocation" x="2006.8702290076335" y="711.97183098591552"/>
         </scene>
-        <!--Item-->
+        <!--Questions-->
         <scene sceneID="LdN-Oe-L90">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cji-1t-5qY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xiN-JP-bPN"/>
+                    <tabBarItem key="tabBarItem" title="Questions" id="xiN-JP-bPN">
+                        <imageReference key="image" image="list.bullet" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" systemColor="linkColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="10Z-Me-pnj">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -213,8 +236,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="text.bubble.fill" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

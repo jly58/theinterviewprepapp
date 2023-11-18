@@ -14,6 +14,8 @@ class QuestionFeedViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var qTableView: UITableView!
     
+    @IBOutlet weak var SaveQuestionButton: UIButton!
+    
     var questions: [QuestionCodable] = []
     
     override func viewDidLoad() {
@@ -83,6 +85,12 @@ class QuestionFeedViewController: UIViewController, UITableViewDataSource, UITab
     
     
     // MARK: - Actions
+    
+    
+    @IBAction func saveQuestionTapped(_ sender: UIButton) {
+        saveQuestions()
+    }
+    
     
     @IBAction func addQuestionButtonTapped(_ sender: UIButton) {
         let newQuestion = QuestionCodable(text: "") // Use the appropriate initializer
