@@ -12,7 +12,6 @@ class EditQuestionViewController: UIViewController {
     weak var delegate: EditQuestionDelegate?
     var questionToEdit: Question?
 
-    // Your implementation here
 }
 //extension QuestionFeedViewController: EditQuestionDelegate {
     
