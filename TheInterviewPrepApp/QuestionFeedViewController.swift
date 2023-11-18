@@ -88,11 +88,31 @@ class QuestionFeedViewController: UIViewController, UITableViewDataSource, UITab
     
     
     @IBAction func saveQuestionTapped(_ sender: UIButton) {
+        print("Save button tapped")
+        UIView.animate(withDuration: 0.2, animations: {
+            // Scale down the button
+            self.SaveQuestionButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }) { _ in
+            // Scale back to the original size
+            UIView.animate(withDuration: 0.2) {
+                self.SaveQuestionButton.transform = .identity
+            }
+        }
         saveQuestions()
     }
     
     
     @IBAction func addQuestionButtonTapped(_ sender: UIButton) {
+        print("Add button tapped")
+        UIView.animate(withDuration: 0.2, animations: {
+            // Scale down the button
+            self.addQuestionButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }) { _ in
+            // Scale back to the original size
+            UIView.animate(withDuration: 0.2) {
+                self.addQuestionButton.transform = .identity
+            }
+        }
         let newQuestion = QuestionCodable(text: "") // Use the appropriate initializer
           questions.append(newQuestion)
           qTableView.reloadData()

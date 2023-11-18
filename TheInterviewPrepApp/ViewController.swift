@@ -8,32 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var pitchTextField: UITextField!
     
-  
-    let textFieldKey = "PitchTextFieldText"
+    @IBOutlet weak var pitchTextView: UITextView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Load the saved text from UserDefaults
-        if let savedText = UserDefaults.standard.string(forKey: textFieldKey) {
-            pitchTextField.text = savedText
-        }
-        
-  
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange(_:)), name: UITextField.textDidChangeNotification, object: pitchTextField)
-    }
-    
+    let textViewKey = "PitchTextViewText"
 
-    @objc func textFieldDidChange(_ notification: Notification) {
-        if let textField = notification.object as? UITextField {
-            UserDefaults.standard.set(textField.text, forKey: textFieldKey)
+        override func viewDidLoad() {
+            super.viewDidLoad()
+
+            if let savedText = UserDefaults.standard.string(forKey: textViewKey) {
+                pitchTextView.text = savedText
+            }
+
+            NotificationCenter.default.addObserver(self, selector: #selector(textViewDidChange(_:)), name: UITextView.textDidChangeNotification, object: pitchTextView)
+        }
+
+        @objc func textViewDidChange(_ notification: Notification) {
+            if let textView = notification.object as? UITextView {
+                UserDefaults.standard.set(textView.text, forKey: textViewKey)
+            }
+        }
+
+        deinit {
+            NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: pitchTextView)
         }
     }
-    
-    deinit {
-
-        NotificationCenter.default.removeObserver(self, name: UITextField.textDidChangeNotification, object: pitchTextField)
-    }
-}

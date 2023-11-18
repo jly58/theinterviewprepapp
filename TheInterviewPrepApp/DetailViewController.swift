@@ -52,8 +52,7 @@ class DetailViewController: UIViewController{
         }
         
         func textViewDidEndEditing(_ textView: UITextView) {
-            // Save the text when the user finishes editing
-            // You can save it to a property, database, or wherever you need
+// nothing added yet
         }
     }
 
